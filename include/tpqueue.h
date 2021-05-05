@@ -41,7 +41,8 @@ class TPQueue {
                 tmp1 = head->next;
                 head->next = create(data);
                 head->next->next = tmp1;
-            } else if (tmp1->next == nullptr && tmp1->data.prior >= data.prior) {
+            } else if (tmp1->next == nullptr
+                       && tmp1->data.prior >= data.prior) {
                 tmp1->next = create(data);
             } else {
                 while (tmp2->next != tmp1) {
